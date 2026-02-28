@@ -1,0 +1,103 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+h1, h2, nav a {
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 0.8px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1.5rem 0 1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0; /* remove bottom margin */
+}
+
+/* indent the first paragraph after each section heading */
+section h2 + p {
+  text-indent: 2rem;
+}
+
+/* ===== Links ===== */
+
+a {
+  color: #aa6666;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #7f4a4a;
+}
+
+a:hover,
+a:focus {
+  color: #4d2a2a;
+  text-decoration: none;
+  outline: none; /* remove default focus outline */
+}
+
+/* External link icon (only for http/https links) */
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.25em;
+  background-image: url("external-link-52.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: text-bottom;
+}
+
+/* ===== Lists ===== */
+
+ul, ol {
+  line-height: 1.6;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin: 0.35rem 0;
+}
+
+/* ===== Nav styling ===== */
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 0 10px;
+}
+
+nav a {
+  display: block;              /* full clickable area */
+  width: 100%;                 /* button fills column */
+  padding: 14px 12px;
+  text-align: center;
+  text-transform: uppercase;   /* uppercase via CSS */
+  background: #aa6666;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+nav a:hover,
+nav a:focus {
+  background: #7f4a4a;
+  color: white;
+}
