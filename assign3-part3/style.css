@@ -1,4 +1,4 @@
- * {
+* {
   box-sizing: border-box;
 }
 
@@ -27,15 +27,31 @@ img {
   max-width: 980px;
 }
 
+/* ===== Sticky + Flex Nav (REQUIRED) ===== */
 nav {
   background-color: black;
   padding: 0.5em;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===== Main 2-column layout (REQUIRED) ===== */
+main.grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px 0;
 }
 
 nav a {
@@ -44,12 +60,20 @@ nav a {
   padding: 0.5em 1em;
 }
 
+/* ===== Float feature image (REQUIRED) ===== */
+.feature {
+  width: 200px;
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+/* ===== Photos 2-column grid (REQUIRED) ===== */
 .photos {
   list-style: none;
   margin: 0;
   padding: 0;
-}
 
-.feature {
-  width: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
 }
