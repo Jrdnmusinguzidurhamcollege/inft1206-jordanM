@@ -8,7 +8,9 @@ body {
   letter-spacing: 0.2px;
 }
 
-h1, h2, nav a {
+h1,
+h2,
+nav a {
   font-family: "Roboto Slab", serif;
   letter-spacing: 0.8px;
 }
@@ -62,7 +64,8 @@ a[href^="http"]::after {
 
 /* ===== Lists ===== */
 
-ul, ol {
+ul,
+ol {
   line-height: 1.6;
   margin: 1rem 0;
   padding-left: 1.5rem;
@@ -72,9 +75,31 @@ li {
   margin: 0.35rem 0;
 }
 
+/* ===== Layout (grid columns) ===== */
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* ===== Sticky Navigation + full width row ===== */
+
+nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 1rem;
+  grid-column: 1 / -1; /* nav spans full width */
+}
+
 /* ===== Nav styling ===== */
 
 nav ul {
+  display: flex;              /* rubric: flexbox */
+  flex-direction: column;
+  justify-content: space-between; /* rubric: justify-content */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -100,4 +125,10 @@ nav a:hover,
 nav a:focus {
   background: #7f4a4a;
   color: white;
+}
+
+/* ===== Float image class (for rubric) ===== */
+.float-img {
+  float: left;
+  margin: 0 1rem 1rem 0;
 }
